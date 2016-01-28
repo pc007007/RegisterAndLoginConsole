@@ -21,7 +21,7 @@ public class DaoTest {
     @Test
     public void addTest() {
 
-        User user = new User("bing","yang","Yinchuan","1234567890","ocean@gmail.com");
+        User user =  new User("bing","yang","Yinchuan","1234567890","ocean@gmail.com");
         UserDao dao = new UserDaoImpl();
         dao.add(user);
     }
