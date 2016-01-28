@@ -16,18 +16,6 @@ import java.util.concurrent.Callable;
 /**
  * Created by pc on 1/25/16.
  */
-class MyCloseable implements Closeable{
-
-
-    @Override
-    public void close() {
-        System.err.println("close");
-    }
-}
-
-class FirstException extends RuntimeException{}
-class SecondException extends RuntimeException{}
-
 public class DaoTest {
 
     @Test
@@ -50,18 +38,5 @@ public class DaoTest {
 
         UserDao dao = new UserDaoImpl();
         User user = dao.get("bing","yang");
-    }
-
-    @Test
-    public void test(String key) {
-
-        try{
-            if("First".equals(key)){
-                throw new FirstException();
-            }else
-                throw new SecondException();
-        }catch(Exception e){
-            throw e;
-        }
     }
 }
